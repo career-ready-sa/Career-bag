@@ -1,0 +1,682 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حقيبة الجاهزية المهنية</title>
+<meta name="description" content="حقيبة إلكترونية تجمع دورات وبرامج وبودكاست مجانية تساعد الطلاب والخريجين على الجاهزية لسوق العمل.">
+<meta name="theme-color" content="#0E2B38">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#0E2B38;--ink-2:#163a49;--teal:#1B7F7A;--teal-d:#14645f;--mist:#EEF4F3;--line:#D5E2E0;--paper:#fff;--text:#1B2B31;--muted:#58696f;--amber:#D9A21B;--r-md:12px;--r-sm:8px;
+--font:'IBM Plex Sans Arabic','Segoe UI',Tahoma,'DejaVu Sans',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--mist);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;background:var(--amber);color:var(--ink);padding:8px 14px;border-radius:var(--r-sm);z-index:60;font-weight:600}
+.skip:focus{top:12px}
+a,button,input{font-family:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+[hidden]{display:none!important}
+h1,h2,h3{margin:0}
+.muted{color:var(--muted);font-size:.9rem}
+svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.1)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:700}
+.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.08);color:var(--amber)}
+.mark svg{width:20px;height:20px}
+.topnav{display:flex;gap:4px}
+.topnav a{color:#C9DDDB;text-decoration:none;padding:6px 12px;border-radius:var(--r-sm);font-size:.95rem}
+.topnav a:hover{background:rgba(255,255,255,.1);color:#fff}
+
+/* hero */
+.hero{background:var(--ink);color:#EAF4F2;padding:48px 0 44px}
+.hero h1{font-size:clamp(2.1rem,6.5vw,3.6rem);line-height:1.25;font-weight:700;margin-bottom:14px}
+.lead{margin:0 0 26px;max-width:60ch;font-size:clamp(1rem,2.4vw,1.2rem);color:#BFD4D2}
+.hero-search{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:38px;max-width:760px}
+.search{position:relative;flex:1 1 280px;display:block}
+.search svg{position:absolute;inset-inline-start:13px;top:50%;translate:0 -50%;width:20px;height:20px;stroke:var(--muted)}
+.search input{width:100%;padding:12px 16px;padding-inline-start:44px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:1rem;color:var(--text)}
+
+/* route */
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);gap:6px;position:relative}
+.route::before{content:"";position:absolute;top:27px;inset-inline:6%;height:2px;background:rgba(255,255,255,.18)}
+.route a{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;text-decoration:none;color:#DCEBE9;font-size:.82rem;line-height:1.5;padding:0 2px}
+.node{width:54px;height:54px;border-radius:50%;background:var(--ink-2);border:2px solid var(--amber);display:grid;place-items:center;color:var(--amber);transition:background .2s,color .2s}
+.node svg{width:24px;height:24px}
+.route a:hover .node{background:var(--amber);color:var(--ink)}
+.route a.soon .node{border-style:dashed;border-color:rgba(255,255,255,.4);color:#9DB7B5}
+
+/* buttons */
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:10px 18px;border-radius:var(--r-sm);background:var(--teal);color:#fff;text-decoration:none;font-weight:600;border:1px solid var(--teal);cursor:pointer;font-size:.98rem;transition:background .2s}
+.btn:hover{background:var(--teal-d)}
+.btn svg{width:16px;height:16px;stroke-width:2}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.amber{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.btn.amber:hover{background:#c4900f}
+
+/* sections */
+h2{font-size:clamp(1.4rem,4vw,1.9rem);line-height:1.4;margin-bottom:16px}
+.results{padding:36px 0 8px}
+.res-head{display:flex;align-items:baseline;gap:14px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none;margin-bottom:8px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fff;color:var(--text);border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;padding:56px 0 40px;align-items:start}
+.about p{margin:0 0 12px;max-width:60ch}
+.goals{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px}
+.goals h3{font-size:1.1rem;margin-bottom:10px}
+.goals ul{list-style:none;margin:0;padding:0}
+.goals li{display:flex;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.goals li:last-child{border:0}
+.goals li svg{flex:none;width:20px;height:20px;margin-top:5px;stroke:var(--teal);stroke-width:2.2}
+.how{background:#fff;border-block:1px solid var(--line);padding:40px 0}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-top:48px}
+.steps li::before{content:counter(s);position:absolute;top:0;inset-inline-start:0;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--amber);display:grid;place-items:center;font-weight:700}
+.steps b{display:block;font-size:1.05rem}
+.steps span{color:var(--muted)}
+.paths-sec{padding:48px 0 56px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.pcard{display:flex;flex-direction:column;gap:8px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.pcard:hover{border-color:var(--teal);transform:translateY(-2px)}
+.pcard.soon{border-style:dashed}
+.pc-top{display:flex;align-items:center;justify-content:space-between}
+.ord{color:var(--teal-d);font-size:.85rem;font-weight:600}
+.pcard h3{font-size:1.1rem;line-height:1.5}
+.pcard p{margin:0;color:var(--muted);font-size:.92rem;flex:1}
+.pc-foot{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+.go{display:inline-flex;align-items:center;gap:4px;color:var(--teal-d);font-weight:600}
+.go svg{width:16px;height:16px;stroke-width:2.2}
+.path-icon{flex:none;width:46px;height:46px;border-radius:var(--r-md);background:var(--ink);display:grid;place-items:center;color:var(--amber)}
+.path-icon svg{width:25px;height:25px}
+.path-icon.lg{width:64px;height:64px;border-radius:16px}
+.path-icon.lg svg{width:34px;height:34px}
+
+/* path page */
+.phero{background:var(--ink);color:#EAF4F2;padding:22px 0 26px}
+.crumbs{display:flex;gap:8px;font-size:.88rem;color:#9DB7B5;margin-bottom:16px}
+.crumbs a{color:#C9DDDB}
+.phead{display:flex;gap:16px;align-items:flex-start}
+.phead .ord{color:var(--amber)}
+.phead h1{font-size:clamp(1.6rem,5vw,2.4rem);line-height:1.35;margin:2px 0 6px}
+.psum{margin:0;color:#BFD4D2;max-width:64ch}
+.pills{display:flex;gap:8px;margin-top:20px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.pills::-webkit-scrollbar{display:none}
+.pills a{flex:none;display:flex;align-items:center;gap:6px;padding:5px 12px;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:#C9DDDB;text-decoration:none;font-size:.85rem}
+.pills a svg{width:16px;height:16px}
+.pills a:hover{border-color:rgba(255,255,255,.5)}
+.pills a[aria-current="page"]{background:var(--amber);border-color:var(--amber);color:var(--ink);font-weight:600}
+.pbody{padding:24px 0 48px}
+.ptools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:6px}
+.ptools .search{flex:1 1 260px;max-width:420px}
+.status{margin:6px 0;color:var(--muted);font-size:.9rem;min-height:1.6em}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.pager a{display:flex;flex-direction:column;padding:14px 18px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);text-decoration:none;color:var(--text)}
+.pager a:hover{border-color:var(--teal)}
+.pager small{color:var(--muted)}
+.pager .pg-prev{text-align:start}
+.pager .pg-next{text-align:end}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:10px}
+.card{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
+.card h3{font-size:1.05rem;line-height:1.55}
+.badge{align-self:flex-start;font-size:.8rem;font-weight:600;padding:2px 10px;border-radius:999px}
+.t-course{background:#E3F1EF;color:#0f5a55}.t-podcast{background:#ECE9F7;color:#4a3b8c}.t-program{background:#FBF0D2;color:#7a5600}.t-virtual{background:#E2EDF9;color:#17518f}.t-enrich{background:#E9EEEB;color:#3d4e45}
+.from{font-size:.82rem;color:var(--teal-d)}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;margin:0;font-size:.9rem}
+.meta dt{color:var(--muted)}.meta dd{margin:0;font-weight:500}
+.desc{margin:0;color:var(--muted);font-size:.92rem}
+.shared{margin:0;font-size:.85rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+.shared a{color:var(--teal-d)}
+.card .btn{margin-top:auto}
+.pending-box{background:#fff;border:1px dashed var(--teal);border-radius:var(--r-md);padding:24px;color:var(--muted)}
+.pending-box p{margin:0}
+.empty{text-align:center;padding:40px 0;color:var(--muted)}
+.foot{background:var(--ink);color:#9DB7B5;padding:22px 0;font-size:.88rem}
+.foot p{margin:0}
+
+@media (max-width:900px){
+  .route{grid-template-columns:repeat(4,1fr);row-gap:16px}.route::before{display:none}
+  .about{grid-template-columns:1fr;gap:24px}
+  .steps{grid-template-columns:1fr}.steps li{padding-top:0;padding-inline-start:50px}
+}
+@media (max-width:560px){
+  .topnav a:nth-child(2){display:none}
+  .brand{font-size:.95rem}
+  .hero{padding:32px 0 30px}
+  .route{grid-template-columns:repeat(2,1fr)}
+  .route a{flex-direction:row;text-align:start;gap:10px;padding:6px 8px;border:1px solid rgba(255,255,255,.14);border-radius:var(--r-md)}
+  .node{width:40px;height:40px;flex:none}.node svg{width:20px;height:20px}
+  .grid{grid-template-columns:1fr}
+  .pager{grid-template-columns:1fr}
+  .path-icon.lg{width:50px;height:50px}.path-icon.lg svg{width:27px;height:27px}
+}
+.phero .path-icon{background:rgba(255,255,255,.07);border:1.5px solid var(--amber)}
+.crumbs a{text-decoration:none}.crumbs a:hover{text-decoration:underline}
+@media (max-width:560px){.brand{font-size:.85rem;gap:8px}.mark{width:30px;height:30px}.topnav a{padding:6px 8px;font-size:.88rem}}
+</style>
+</head><body>
+<a class="skip" href="#main">انتقل إلى المحتوى</a><header class="top"><div class="wrap top-in">
+  <a class="brand" href="index.html"><span class="mark"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>حقيبة الجاهزية المهنية</a>
+  <nav class="topnav" aria-label="التنقل الرئيسي">
+    <a href="index.html">الرئيسية</a><a href="index.html#about">عن الحقيبة</a><a href="index.html#paths">المسارات</a>
+  </nav>
+</div></header>
+<main id="main"><div id="app"></div></main><footer class="foot"><div class="wrap">
+<p>تفتح الروابط في نافذة جديدة على مواقع الجهات المقدمة، وتخضع شروط التسجيل والإتاحة لكل جهة.</p>
+</div></footer>
+<template id="tpl-index">
+<section class="hero"><div class="wrap">
+  <h1>حقيبة الجاهزية المهنية</h1>
+  <p class="lead">دورات وبرامج وبودكاست مجانية في مكان واحد، تنقلك من مقاعد الدراسة إلى بيئة العمل: من كتابة السيرة الذاتية إلى المقابلة والمهارات التي يطلبها السوق.</p>
+  <form class="hero-search" role="search" onsubmit="return false">
+    <label class="search"><span class="sr">ابحث في الحقيبة</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+    <input id="q" type="search" placeholder="ابحث في كل المسارات باسم المادة أو الجهة" autocomplete="off"></label>
+    <a class="btn amber" href="#paths">استعرض المسارات</a>
+  </form>
+  <ol class="route" aria-label="مسارات الحقيبة بالترتيب"><li><a href="path-1.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><span class="rl">كفاءة كتابة السيرة الذاتية</span></a></li><li><a href="path-2.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="rl">فهم سوق العمل واحتياجاته</span></a></li><li><a href="path-3.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg></span><span class="rl">اجتياز المقابلات الشخصية</span></a></li><li><a href="path-4.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><span class="rl">الذكاء الاصطناعي</span></a></li><li><a href="path-5.html" class="soon"><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></span><span class="rl">خدمات صندوق تنمية الموارد البشرية (هدف)</span></a></li><li><a href="path-6.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg></span><span class="rl">المهارات الشخصية</span></a></li><li><a href="path-7.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></span><span class="rl">مهارات Microsoft</span></a></li><li><a href="path-8.html" class=""><span class="node"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><span class="rl">مسك للإعداد المهني</span></a></li></ol>
+</div></section>
+
+<section id="results" class="wrap results" hidden aria-live="polite">
+  <div class="res-head"><h2>نتائج البحث</h2><span id="resCount" class="muted"></span></div>
+  <div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button><button type="button" class="chip" data-type="podcast" aria-pressed="false">بودكاست</button><button type="button" class="chip" data-type="program" aria-pressed="false">برنامج تدريبي متكامل</button><button type="button" class="chip" data-type="virtual" aria-pressed="false">تجربة عمل افتراضية</button><button type="button" class="chip" data-type="enrich" aria-pressed="false">مادة إثرائية</button></div>
+  <div id="resGrid" class="grid"></div>
+  <div id="resEmpty" class="empty" hidden><p>لا توجد مواد تطابق بحثك.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div>
+</section>
+
+<section id="about" class="wrap about">
+  <div class="about-text">
+    <h2>عن الحقيبة</h2>
+    <p>ينتقل الطلاب والخريجون إلى سوق العمل وهم بحاجة إلى مهارات عملية تتجاوز التحصيل الأكاديمي. وتتوافر مواد تدريبية مجانية وموثوقة لدى جهات وطنية ومنصات معروفة، لكنها متفرقة ويصعب ترتيبها.</p>
+    <p>تجمع الحقيبة هذه المواد في ثمانية مسارات واضحة، وتوصلك إلى المصدر الأصلي بضغطة زر. موجهة لطلاب وطالبات المرحلة الجامعية، ويستفيد منها الخريجون والباحثون عن عمل.</p>
+  </div>
+  <div class="goals"><h3>أهداف الحقيبة</h3><ul><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>تعزيز الجاهزية المهنية للطلاب والخريجين.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>تسهيل الوصول إلى الدورات التدريبية المجانية.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>تطوير المهارات الشخصية والعملية.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>رفع كفاءة إعداد السيرة الذاتية والاستعداد للمقابلات.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>تعزيز الوعي بمتطلبات سوق العمل.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>تنمية المهارات الرقمية والتقنية.</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>تشجيع التعلم المستمر والتطوير الذاتي.</span></li></ul></div>
+</section>
+
+<section class="how"><div class="wrap">
+  <h2>كيف تستخدم الحقيبة</h2>
+  <ol class="steps">
+    <li><b>اختر مسارًا</b><span>من المسارات الثمانية أدناه، أو ابحث باسم مادة أو جهة.</span></li>
+    <li><b>تصفح المواد</b><span>لكل مادة بطاقة فيها نوعها والجهة المقدمة والمدة ووصف مختصر.</span></li>
+    <li><b>انتقل إلى المصدر</b><span>زر البطاقة يفتح الدورة أو المحتوى مباشرة على موقع الجهة.</span></li>
+  </ol>
+</div></section>
+
+<section id="paths" class="wrap paths-sec">
+  <h2>المسارات المهنية</h2>
+  <div class="pgrid"><a class="pcard" href="path-1.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><span class="ord">المسار الأول</span></span><h3>كفاءة كتابة السيرة الذاتية</h3><p>تبدأ الجاهزية المهنية من وثيقة تعرّف بك أمام جهة التوظيف؛ يجمع هذا المسار مواد تعين على بناء سيرة ذاتية واضحة ومنظمة.</p><span class="pc-foot"><b>3 مواد</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard" href="path-2.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span class="ord">المسار الثاني</span></span><h3>فهم سوق العمل واحتياجاته</h3><p>معرفة ما يطلبه السوق اليوم وغدًا تساعدك على توجيه جهدك التدريبي والبحث عن الفرصة المناسبة.</p><span class="pc-foot"><b>مادتان</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard" href="path-3.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg></span><span class="ord">المسار الثالث</span></span><h3>اجتياز المقابلات الشخصية</h3><p>المقابلة هي اللحظة التي تتحول فيها السيرة الذاتية إلى حوار؛ يضم المسار مادتين للاستعداد لها.</p><span class="pc-foot"><b>مادتان</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard" href="path-4.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><span class="ord">المسار الرابع</span></span><h3>الذكاء الاصطناعي</h3><p>أصبحت المعرفة بأساسيات الذكاء الاصطناعي جزءًا من المهارات الرقمية المطلوبة؛ يبدأ المسار بالمبادئ ثم تجربة عمل افتراضية.</p><span class="pc-foot"><b>مادتان</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard soon" href="path-5.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></span><span class="ord">المسار الخامس</span></span><h3>خدمات صندوق تنمية الموارد البشرية (هدف)</h3><p>هذا المسار قيد الإعداد، وسيُضاف محتواه لاحقًا.</p><span class="pc-foot"><b>قيد الإعداد</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard" href="path-6.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg></span><span class="ord">المسار السادس</span></span><h3>المهارات الشخصية</h3><p>تحسم المهارات الشخصية كثيرًا من مواقف العمل اليومية؛ يجمع المسار مواد في التواصل والذكاء العاطفي والقيادة والتخطيط.</p><span class="pc-foot"><b>6 مواد</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard" href="path-7.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></span><span class="ord">المسار السابع</span></span><h3>مهارات Microsoft</h3><p>إتقان أدوات المكتب الأساسية يرفع سرعة الإنجاز في أي وظيفة؛ يغطي المسار Excel وWord وقواعد البيانات.</p><span class="pc-foot"><b>3 مواد</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a><a class="pcard" href="path-8.html"><span class="pc-top"><span class="path-icon"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><span class="ord">المسار الثامن</span></span><h3>مسك للإعداد المهني</h3><p>يجمع هذا المسار مواد مسك في الإعداد المهني: برنامجًا متكاملًا من 16 دورة، ومادة لاكتشاف المسار، وتجربة عمل افتراضية.</p><span class="pc-foot"><b>3 مواد</b><span class="go">ادخل المسار<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span></span></a></div>
+</section>
+</template><template id="tpl-path-1">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار الأول</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><div><span class="ord">المسار الأول · 3 مواد</span><h1>كفاءة كتابة السيرة الذاتية</h1><p class="psum">تبدأ الجاهزية المهنية من وثيقة تعرّف بك أمام جهة التوظيف؛ يجمع هذا المسار مواد تعين على بناء سيرة ذاتية واضحة ومنظمة.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" aria-current="page" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button><button type="button" class="chip" data-type="podcast" aria-pressed="false">بودكاست</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="podcast" data-text="بودكاست هدف: ثقافة بناء السيرة الذاتية هدف حلقة بودكاست من «هدف» تتناول ثقافة بناء السيرة الذاتية وأسسها العامة. بودكاست"><span class="badge t-podcast">بودكاست</span><h3>بودكاست هدف: ثقافة بناء السيرة الذاتية</h3><dl class="meta"><dt>الجهة</dt><dd>هدف</dd><dt>المدة</dt><dd>غير محدد</dd></dl><p class="desc">حلقة بودكاست من «هدف» تتناول ثقافة بناء السيرة الذاتية وأسسها العامة.</p><a class="btn" href="https://youtu.be/QTyAQFIC8RI?si=CbOmiJ9SN9RnmfPj" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="السيرة الذاتية الرقمية منصة دروب تتناول أساسيات إعداد السيرة الذاتية الرقمية ومكوناتها ومتطلباتها وفق احتياجات سوق العمل، وكيفية إبراز المؤهلات والخبرات والمهارات، وإعداد سيرة منظمة متوافقة مع أنظمة تتبع طلبات التوظيف (ats). المستوى: مبتدئ. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>السيرة الذاتية الرقمية</h3><dl class="meta"><dt>الجهة</dt><dd>منصة دروب</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">تتناول أساسيات إعداد السيرة الذاتية الرقمية ومكوناتها ومتطلباتها وفق احتياجات سوق العمل، وكيفية إبراز المؤهلات والخبرات والمهارات، وإعداد سيرة منظمة متوافقة مع أنظمة تتبع طلبات التوظيف (ATS). المستوى: مبتدئ.</p><a class="btn" href="https://lms.doroob.sa/courses/course-v1:Doroob+C.S-CRSKL015+OCT2021/about" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="أساسيات كتابة السيرة الذاتية منصة إدراك دورة على منصة إدراك تتناول أساسيات كتابة السيرة الذاتية بحسب عنوانها. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>أساسيات كتابة السيرة الذاتية</h3><dl class="meta"><dt>الجهة</dt><dd>منصة إدراك</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">دورة على منصة إدراك تتناول أساسيات كتابة السيرة الذاتية بحسب عنوانها.</p><a class="btn" href="https://programs.edraak.org/learn/course/cvw-v1" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><span></span><a class="pg-prev" href="path-2.html"><small>المسار التالي</small><b>فهم سوق العمل واحتياجاته</b></a></nav></section>
+</template><template id="tpl-path-2">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار الثاني</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><span class="ord">المسار الثاني · مادتان</span><h1>فهم سوق العمل واحتياجاته</h1><p class="psum">معرفة ما يطلبه السوق اليوم وغدًا تساعدك على توجيه جهدك التدريبي والبحث عن الفرصة المناسبة.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" aria-current="page" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="podcast" aria-pressed="false">بودكاست</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="podcast" data-text="مهارات البحث عن وظيفة هدف حلقة بودكاست من «هدف» عن مهارات البحث عن وظيفة وأساليبه. بودكاست"><span class="badge t-podcast">بودكاست</span><h3>مهارات البحث عن وظيفة</h3><dl class="meta"><dt>الجهة</dt><dd>هدف</dd><dt>المدة</dt><dd>34 دقيقة</dd></dl><p class="desc">حلقة بودكاست من «هدف» عن مهارات البحث عن وظيفة وأساليبه.</p><a class="btn" href="https://youtu.be/L49LoQ_5QGo?si=Rdpn1CgsWmoR5z2o" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="podcast" data-text="متطلبات سوق العمل المستقبلية هدف حلقة بودكاست من «هدف» عن المهارات والمتطلبات التي يُتوقع أن يطلبها سوق العمل مستقبلًا. بودكاست"><span class="badge t-podcast">بودكاست</span><h3>متطلبات سوق العمل المستقبلية</h3><dl class="meta"><dt>الجهة</dt><dd>هدف</dd><dt>المدة</dt><dd>12 دقيقة</dd></dl><p class="desc">حلقة بودكاست من «هدف» عن المهارات والمتطلبات التي يُتوقع أن يطلبها سوق العمل مستقبلًا.</p><a class="btn" href="https://youtu.be/ZJaUJ9L7Hkk?si=mu_rSabTcktDALhh" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-1.html"><small>المسار السابق</small><b>كفاءة كتابة السيرة الذاتية</b></a><a class="pg-prev" href="path-3.html"><small>المسار التالي</small><b>اجتياز المقابلات الشخصية</b></a></nav></section>
+</template><template id="tpl-path-3">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار الثالث</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg></span><div><span class="ord">المسار الثالث · مادتان</span><h1>اجتياز المقابلات الشخصية</h1><p class="psum">المقابلة هي اللحظة التي تتحول فيها السيرة الذاتية إلى حوار؛ يضم المسار مادتين للاستعداد لها.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" aria-current="page" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button><button type="button" class="chip" data-type="podcast" aria-pressed="false">بودكاست</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="podcast" data-text="الأساليب الصحيحة في المقابلات الوظيفية هدف حلقة بودكاست من «هدف» عن الأساليب الصحيحة في التعامل مع المقابلات الوظيفية. بودكاست"><span class="badge t-podcast">بودكاست</span><h3>الأساليب الصحيحة في المقابلات الوظيفية</h3><dl class="meta"><dt>الجهة</dt><dd>هدف</dd><dt>المدة</dt><dd>36 دقيقة</dd></dl><p class="desc">حلقة بودكاست من «هدف» عن الأساليب الصحيحة في التعامل مع المقابلات الوظيفية.</p><a class="btn" href="https://youtu.be/dHABMqb1Ju8?si=lCIoGPORePCBke1f" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="المقابلة الشخصية الاحترافية منصة دروب تكسب المتدرب المعارف المتعلقة بالمقابلة الشخصية، وتبرز أهمية المهارات الحوارية والاستعداد الجيد لها بما يزيد فرصه في الحصول على وظيفة. المستوى: مبتدئ. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>المقابلة الشخصية الاحترافية</h3><dl class="meta"><dt>الجهة</dt><dd>منصة دروب</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">تكسب المتدرب المعارف المتعلقة بالمقابلة الشخصية، وتبرز أهمية المهارات الحوارية والاستعداد الجيد لها بما يزيد فرصه في الحصول على وظيفة. المستوى: مبتدئ.</p><a class="btn" href="https://lms.doroob.sa/courses/course-v1:Doroob+C.S-CRSKL014+AUG2021/about" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-2.html"><small>المسار السابق</small><b>فهم سوق العمل واحتياجاته</b></a><a class="pg-prev" href="path-4.html"><small>المسار التالي</small><b>الذكاء الاصطناعي</b></a></nav></section>
+</template><template id="tpl-path-4">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار الرابع</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><div><span class="ord">المسار الرابع · مادتان</span><h1>الذكاء الاصطناعي</h1><p class="psum">أصبحت المعرفة بأساسيات الذكاء الاصطناعي جزءًا من المهارات الرقمية المطلوبة؛ يبدأ المسار بالمبادئ ثم تجربة عمل افتراضية.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" aria-current="page" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button><button type="button" class="chip" data-type="virtual" aria-pressed="false">تجربة عمل افتراضية</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="course" data-text="مبادئ الذكاء الاصطناعي سدايا – سماي دورة من سدايا (سماي) تتناول مبادئ الذكاء الاصطناعي بحسب عنوانها. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>مبادئ الذكاء الاصطناعي</h3><dl class="meta"><dt>الجهة</dt><dd>سدايا – سماي</dd><dt>المدة</dt><dd>4 ساعات</dd></dl><p class="desc">دورة من سدايا (سماي) تتناول مبادئ الذكاء الاصطناعي بحسب عنوانها.</p><a class="btn" href="https://sdaia.gov.sa/ar/MediaCenter/Initiatives/Pages/Details.aspx?ItemID=19" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="virtual" data-text="الذكاء الاصطناعي في مايكروسوفت مسك بالتعاون مع مايكروسوفت تجربة عمل افتراضية محاكية للواقع من مايكروسوفت في علم البيانات والذكاء الاصطناعي، يعمل فيها المشارك بدور مستشار مبتدئ عبر أربع مهام: إعداد مساحة عمل على azure، وتحليل البيانات، وبناء نموذج باستخدام custom vision، وبناء نموذج باستخدام azure machine learning. موجهة لحديثي التخرج من تخصصات تقنية وطلبة السنة الأخيرة. تجربة عمل افتراضية"><span class="badge t-virtual">تجربة عمل افتراضية</span><h3>الذكاء الاصطناعي في مايكروسوفت</h3><dl class="meta"><dt>الجهة</dt><dd>مسك بالتعاون مع مايكروسوفت</dd><dt>المدة</dt><dd>7 ساعات</dd></dl><p class="desc">تجربة عمل افتراضية محاكية للواقع من مايكروسوفت في علم البيانات والذكاء الاصطناعي، يعمل فيها المشارك بدور مستشار مبتدئ عبر أربع مهام: إعداد مساحة عمل على Azure، وتحليل البيانات، وبناء نموذج باستخدام Custom Vision، وبناء نموذج باستخدام Azure Machine Learning. موجهة لحديثي التخرج من تخصصات تقنية وطلبة السنة الأخيرة.</p><p class="shared">مادة مشتركة مع مسار <a href="path-8.html">مسك للإعداد المهني</a></p><a class="btn" href="https://hub.misk.org.sa/ar/programs/skills/microsoft-x-misk-virtual-work-experience-artificial-intelligence/" target="_blank" rel="noopener noreferrer">انتقل إلى المصدر<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-3.html"><small>المسار السابق</small><b>اجتياز المقابلات الشخصية</b></a><a class="pg-prev" href="path-5.html"><small>المسار التالي</small><b>خدمات صندوق تنمية الموارد البشرية (هدف)</b></a></nav></section>
+</template><template id="tpl-path-5">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار الخامس</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg></span><div><span class="ord">المسار الخامس · قيد الإعداد</span><h1>خدمات صندوق تنمية الموارد البشرية (هدف)</h1></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" aria-current="page" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><p id="status" class="status" role="status" aria-live="polite"></p><div class="pending-box"><p>هذا المسار قيد الإعداد، وسيُضاف محتواه لاحقًا.</p></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-4.html"><small>المسار السابق</small><b>الذكاء الاصطناعي</b></a><a class="pg-prev" href="path-6.html"><small>المسار التالي</small><b>المهارات الشخصية</b></a></nav></section>
+</template><template id="tpl-path-6">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار السادس</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg></span><div><span class="ord">المسار السادس · 6 مواد</span><h1>المهارات الشخصية</h1><p class="psum">تحسم المهارات الشخصية كثيرًا من مواقف العمل اليومية؛ يجمع المسار مواد في التواصل والذكاء العاطفي والقيادة والتخطيط.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" aria-current="page" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button><button type="button" class="chip" data-type="podcast" aria-pressed="false">بودكاست</button><button type="button" class="chip" data-type="enrich" aria-pressed="false">مادة إثرائية</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="podcast" data-text="المهارات الناعمة وعلاقتها بأدائك الوظيفي هدف حلقة بودكاست من «هدف» عن علاقة المهارات الناعمة بالأداء الوظيفي. بودكاست"><span class="badge t-podcast">بودكاست</span><h3>المهارات الناعمة وعلاقتها بأدائك الوظيفي</h3><dl class="meta"><dt>الجهة</dt><dd>هدف</dd><dt>المدة</dt><dd>15 دقيقة</dd></dl><p class="desc">حلقة بودكاست من «هدف» عن علاقة المهارات الناعمة بالأداء الوظيفي.</p><a class="btn" href="https://youtu.be/bpWM9WX1GvQ?si=dXyL-BkbWpxz6Apw" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="enrich" data-text="مهارات الذكاء العاطفي هدف مادة مرئية من «هدف» عن مهارات الذكاء العاطفي. مادة إثرائية"><span class="badge t-enrich">مادة إثرائية</span><h3>مهارات الذكاء العاطفي</h3><dl class="meta"><dt>الجهة</dt><dd>هدف</dd><dt>المدة</dt><dd>ساعة واحدة</dd></dl><p class="desc">مادة مرئية من «هدف» عن مهارات الذكاء العاطفي.</p><a class="btn" href="https://youtu.be/lSu0kNN1xQQ?si=vBhcMEYCrEHRq8uC" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="القيادة المؤثرة والإدارة الفعالة منصة إدراك دورة على منصة إدراك تتناول القيادة المؤثرة والإدارة الفعالة بحسب عنوانها. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>القيادة المؤثرة والإدارة الفعالة</h3><dl class="meta"><dt>الجهة</dt><dd>منصة إدراك</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">دورة على منصة إدراك تتناول القيادة المؤثرة والإدارة الفعالة بحسب عنوانها.</p><a class="btn" href="https://programs.edraak.org/learn/course/lem101-v2019_t4" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="podcast" data-text="مهارة التواصل الفعال مختلف حلقة بودكاست عن مهارة التواصل الفعال، والجهة المنتجة لها مذكورة في المصدر الأصلي بكلمة «مختلف». بودكاست"><span class="badge t-podcast">بودكاست</span><h3>مهارة التواصل الفعال</h3><dl class="meta"><dt>الجهة</dt><dd>مختلف</dd><dt>المدة</dt><dd>ساعة واحدة</dd></dl><p class="desc">حلقة بودكاست عن مهارة التواصل الفعال، والجهة المنتجة لها مذكورة في المصدر الأصلي بكلمة «مختلف».</p><a class="btn" href="https://youtu.be/fXJkviW1W9o?si=Gk0aO4jxa6L-_BYF" target="_blank" rel="noopener noreferrer">شاهد المحتوى<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="العقلية الريادية وإدارة الأزمات منصة دروب جلسة تدريبية بالتعاون مع «منشآت» يقدمها الأستاذ قليّل الشهري، تتناول مفهوم الأزمات، والعقل الريادي، واستراتيجية العقلية وطرق التفكير. المستوى: مبتدئ. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>العقلية الريادية وإدارة الأزمات</h3><dl class="meta"><dt>الجهة</dt><dd>منصة دروب</dd><dt>المدة</dt><dd>ساعتان</dd></dl><p class="desc">جلسة تدريبية بالتعاون مع «منشآت» يقدمها الأستاذ قليّل الشهري، تتناول مفهوم الأزمات، والعقل الريادي، واستراتيجية العقلية وطرق التفكير. المستوى: مبتدئ.</p><a class="btn" href="https://lms.doroob.sa/courses/Doroob/W.S-BUSAD011/MAY2020/about" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="التخطيط الاستراتيجي لرواد الأعمال منصة دروب جلسة تدريبية بالتعاون مع «منشآت» يقدمها الدكتور وديع سعيد أزهر، تتناول رواد الأعمال، ولماذا نخطط وهل التخطيط ضرورة، وتحديات التخطيط الاستراتيجي. المستوى: مبتدئ. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>التخطيط الاستراتيجي لرواد الأعمال</h3><dl class="meta"><dt>الجهة</dt><dd>منصة دروب</dd><dt>المدة</dt><dd>ساعة ونصف</dd></dl><p class="desc">جلسة تدريبية بالتعاون مع «منشآت» يقدمها الدكتور وديع سعيد أزهر، تتناول رواد الأعمال، ولماذا نخطط وهل التخطيط ضرورة، وتحديات التخطيط الاستراتيجي. المستوى: مبتدئ.</p><a class="btn" href="https://lms.doroob.sa/courses/Doroob/W.S-BUSAD019/OCT2020/about" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-5.html"><small>المسار السابق</small><b>خدمات صندوق تنمية الموارد البشرية (هدف)</b></a><a class="pg-prev" href="path-7.html"><small>المسار التالي</small><b>مهارات Microsoft</b></a></nav></section>
+</template><template id="tpl-path-7">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار السابع</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></span><div><span class="ord">المسار السابع · 3 مواد</span><h1>مهارات Microsoft</h1><p class="psum">إتقان أدوات المكتب الأساسية يرفع سرعة الإنجاز في أي وظيفة؛ يغطي المسار Excel وWord وقواعد البيانات.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" aria-current="page" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="course" data-text="مهارات متقدمة في excel منصة إدراك دورة على منصة إدراك تتناول المهارات المتقدمة في برنامج excel بحسب عنوانها. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>مهارات متقدمة في Excel</h3><dl class="meta"><dt>الجهة</dt><dd>منصة إدراك</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">دورة على منصة إدراك تتناول المهارات المتقدمة في برنامج Excel بحسب عنوانها.</p><a class="btn" href="https://programs.edraak.org/learn/course/ae101-vsp-2019" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="معالج النصوص word منصة إدراك تعلّم أساسيات معالجة النصوص والتعامل معها في word، وتُعد جزءًا أساسيًا من سلسلة امتحانات icdl. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>معالج النصوص Word</h3><dl class="meta"><dt>الجهة</dt><dd>منصة إدراك</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">تعلّم أساسيات معالجة النصوص والتعامل معها في Word، وتُعد جزءًا أساسيًا من سلسلة امتحانات ICDL.</p><a class="btn" href="https://www.edraak.org/programs/course/icdl3-v2019sp/" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="قواعد بيانات microsoft منصة إدراك مقدمة في microsoft sql server: أنواع البيانات والاستعلامات وكائنات قاعدة البيانات، كخطوة أولى نحو إدارة قواعد البيانات. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>قواعد بيانات Microsoft</h3><dl class="meta"><dt>الجهة</dt><dd>منصة إدراك</dd><dt>المدة</dt><dd>3 ساعات</dd></dl><p class="desc">مقدمة في Microsoft SQL Server: أنواع البيانات والاستعلامات وكائنات قاعدة البيانات، كخطوة أولى نحو إدارة قواعد البيانات.</p><a class="btn" href="https://www.edraak.org/programs/course/sql1-v1/" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-6.html"><small>المسار السابق</small><b>المهارات الشخصية</b></a><a class="pg-prev" href="path-8.html"><small>المسار التالي</small><b>مسك للإعداد المهني</b></a></nav></section>
+</template><template id="tpl-path-8">
+<section class="phero"><div class="wrap">
+  <nav class="crumbs" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>المسار الثامن</span></nav>
+  <div class="phead"><span class="path-icon lg"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><div><span class="ord">المسار الثامن · 3 مواد</span><h1>مسك للإعداد المهني</h1><p class="psum">يجمع هذا المسار مواد مسك في الإعداد المهني: برنامجًا متكاملًا من 16 دورة، ومادة لاكتشاف المسار، وتجربة عمل افتراضية.</p></div></div>
+  <nav class="pills" aria-label="كل المسارات"><a href="path-1.html" title="كفاءة كتابة السيرة الذاتية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span>الأول</span></a><a href="path-2.html" title="فهم سوق العمل واحتياجاته"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>الثاني</span></a><a href="path-3.html" title="اجتياز المقابلات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v7H9l-3 3v-3H4z"/><path d="M18 9h2v8h-2v3l-3-3h-5v-2"/></svg><span>الثالث</span></a><a href="path-4.html" title="الذكاء الاصطناعي"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>الرابع</span></a><a href="path-5.html" title="خدمات صندوق تنمية الموارد البشرية (هدف)"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20h18"/></svg><span>الخامس</span></a><a href="path-6.html" title="المهارات الشخصية"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2 0 4 1.8 4 4"/></svg><span>السادس</span></a><a href="path-7.html" title="مهارات Microsoft"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>السابع</span></a><a href="path-8.html" aria-current="page" title="مسك للإعداد المهني"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>الثامن</span></a></nav>
+</div></section>
+<section class="wrap pbody"><div class="ptools"><label class="search"><span class="sr">ابحث في هذا المسار</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="q" type="search" placeholder="ابحث في هذا المسار" autocomplete="off"></label><div class="chips" id="typeChips" role="group" aria-label="تصفية حسب نوع المادة"><button type="button" class="chip" data-type="all" aria-pressed="true">الكل</button><button type="button" class="chip" data-type="course" aria-pressed="false">دورة تدريبية</button><button type="button" class="chip" data-type="program" aria-pressed="false">برنامج تدريبي متكامل</button><button type="button" class="chip" data-type="virtual" aria-pressed="false">تجربة عمل افتراضية</button></div></div><p id="status" class="status" role="status" aria-live="polite"></p><div class="grid" id="grid"><article class="card" data-type="program" data-text="برنامج مسك للإعداد المهني مسك برنامج تعلم ذاتي عن بعد يضم 16 دورة في أربع مكتبات: الإعداد المهني (بناء السيرة الذاتية ومهارات المقابلة والبحث عن وظيفة ولينكد إن)، والمهارات الناعمة (التواصل الفعال والذكاء العاطفي والتفكير الناقد وإدارة الوقت)، والمهارات التقنية (الأمن السيبراني والحوسبة السحابية والذكاء الاصطناعي)، والمهارات المهنية (التفكير التصميمي وتحليل الأعمال والقيادة)، مع جلسات تدريبية وإرشادية. برنامج تدريبي متكامل"><span class="badge t-program">برنامج تدريبي متكامل</span><h3>برنامج مسك للإعداد المهني</h3><dl class="meta"><dt>الجهة</dt><dd>مسك</dd><dt>المدة</dt><dd>16 دورة، مدة كل دورة من ساعة إلى ساعتين</dd></dl><p class="desc">برنامج تعلم ذاتي عن بعد يضم 16 دورة في أربع مكتبات: الإعداد المهني (بناء السيرة الذاتية ومهارات المقابلة والبحث عن وظيفة ولينكد إن)، والمهارات الناعمة (التواصل الفعال والذكاء العاطفي والتفكير الناقد وإدارة الوقت)، والمهارات التقنية (الأمن السيبراني والحوسبة السحابية والذكاء الاصطناعي)، والمهارات المهنية (التفكير التصميمي وتحليل الأعمال والقيادة)، مع جلسات تدريبية وإرشادية.</p><a class="btn" href="https://hub.misk.org.sa/ar/programs/skills/misk-career-essentials-program/" target="_blank" rel="noopener noreferrer">انتقل إلى المصدر<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="course" data-text="اكتشف مسارك مسك برنامج تعلم ذاتي عن بعد لاكتشاف الذات والقدرات والسمات الشخصية والقطاعات الواعدة وبناء الأهداف المهنية. تصفه الصفحة الأصلية بأنه مصمم لطلاب المرحلة الثانوية، مع مسارات لأولياء الأمور والمعلمين. دورة تدريبية"><span class="badge t-course">دورة تدريبية</span><h3>اكتشف مسارك</h3><dl class="meta"><dt>الجهة</dt><dd>مسك</dd><dt>المدة</dt><dd>ساعتان</dd></dl><p class="desc">برنامج تعلم ذاتي عن بعد لاكتشاف الذات والقدرات والسمات الشخصية والقطاعات الواعدة وبناء الأهداف المهنية. تصفه الصفحة الأصلية بأنه مصمم لطلاب المرحلة الثانوية، مع مسارات لأولياء الأمور والمعلمين.</p><a class="btn" href="https://hub.misk.org.sa/ar/programs/skills/discover-your-path/" target="_blank" rel="noopener noreferrer">ابدأ الدورة<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article><article class="card" data-type="virtual" data-text="تجربة العمل الافتراضي: الذكاء الاصطناعي في مايكروسوفت مسك بالتعاون مع مايكروسوفت تجربة عمل افتراضية محاكية للواقع من مايكروسوفت في علم البيانات والذكاء الاصطناعي، يعمل فيها المشارك بدور مستشار مبتدئ عبر أربع مهام: إعداد مساحة عمل على azure، وتحليل البيانات، وبناء نموذج باستخدام custom vision، وبناء نموذج باستخدام azure machine learning. موجهة لحديثي التخرج من تخصصات تقنية وطلبة السنة الأخيرة. تجربة عمل افتراضية"><span class="badge t-virtual">تجربة عمل افتراضية</span><h3>تجربة العمل الافتراضي: الذكاء الاصطناعي في مايكروسوفت</h3><dl class="meta"><dt>الجهة</dt><dd>مسك بالتعاون مع مايكروسوفت</dd><dt>المدة</dt><dd>7 ساعات</dd></dl><p class="desc">تجربة عمل افتراضية محاكية للواقع من مايكروسوفت في علم البيانات والذكاء الاصطناعي، يعمل فيها المشارك بدور مستشار مبتدئ عبر أربع مهام: إعداد مساحة عمل على Azure، وتحليل البيانات، وبناء نموذج باستخدام Custom Vision، وبناء نموذج باستخدام Azure Machine Learning. موجهة لحديثي التخرج من تخصصات تقنية وطلبة السنة الأخيرة.</p><p class="shared">مادة مشتركة مع مسار <a href="path-4.html">الذكاء الاصطناعي</a></p><a class="btn" href="https://hub.misk.org.sa/ar/programs/skills/microsoft-x-misk-virtual-work-experience-artificial-intelligence/" target="_blank" rel="noopener noreferrer">انتقل إلى المصدر<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></article></div><div id="empty" class="empty" hidden><p>لا توجد مواد تطابق بحثك في هذا المسار.</p><button type="button" id="reset" class="btn ghost">إعادة ضبط البحث</button></div><nav class="pager" aria-label="التنقل بين المسارات"><a class="pg-next" href="path-7.html"><small>المسار السابق</small><b>مهارات Microsoft</b></a><span></span></nav></section>
+</template>
+<script>window.BAG_DATA = {
+  "title": "حقيبة الجاهزية المهنية",
+  "types": {
+    "course": "دورة تدريبية",
+    "podcast": "بودكاست",
+    "program": "برنامج تدريبي متكامل",
+    "virtual": "تجربة عمل افتراضية",
+    "enrich": "مادة إثرائية"
+  },
+  "ctaByType": {
+    "course": "ابدأ الدورة",
+    "podcast": "شاهد المحتوى",
+    "program": "انتقل إلى المصدر",
+    "virtual": "انتقل إلى المصدر",
+    "enrich": "شاهد المحتوى"
+  },
+  "paths": [
+    {
+      "id": 1,
+      "ordinal": "المسار الأول",
+      "name": "كفاءة كتابة السيرة الذاتية",
+      "icon": "cv",
+      "summary": "تبدأ الجاهزية المهنية من وثيقة تعرّف بك أمام جهة التوظيف؛ يجمع هذا المسار مواد تعين على بناء سيرة ذاتية واضحة ومنظمة.",
+      "items": [
+        {
+          "id": "cv-podcast",
+          "title": "بودكاست هدف: ثقافة بناء السيرة الذاتية",
+          "type": "podcast",
+          "source": "هدف",
+          "duration": "غير محدد",
+          "desc": "حلقة بودكاست من «هدف» تتناول ثقافة بناء السيرة الذاتية وأسسها العامة.",
+          "url": "https://youtu.be/QTyAQFIC8RI?si=CbOmiJ9SN9RnmfPj",
+          "verified": false
+        },
+        {
+          "id": "cv-digital",
+          "title": "السيرة الذاتية الرقمية",
+          "type": "course",
+          "source": "منصة دروب",
+          "duration": "3 ساعات",
+          "desc": "تتناول أساسيات إعداد السيرة الذاتية الرقمية ومكوناتها ومتطلباتها وفق احتياجات سوق العمل، وكيفية إبراز المؤهلات والخبرات والمهارات، وإعداد سيرة منظمة متوافقة مع أنظمة تتبع طلبات التوظيف (ATS). المستوى: مبتدئ.",
+          "url": "https://lms.doroob.sa/courses/course-v1:Doroob+C.S-CRSKL015+OCT2021/about",
+          "verified": true
+        },
+        {
+          "id": "cv-basics",
+          "title": "أساسيات كتابة السيرة الذاتية",
+          "type": "course",
+          "source": "منصة إدراك",
+          "duration": "3 ساعات",
+          "desc": "دورة على منصة إدراك تتناول أساسيات كتابة السيرة الذاتية بحسب عنوانها.",
+          "url": "https://programs.edraak.org/learn/course/cvw-v1",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "ordinal": "المسار الثاني",
+      "name": "فهم سوق العمل واحتياجاته",
+      "icon": "market",
+      "summary": "معرفة ما يطلبه السوق اليوم وغدًا تساعدك على توجيه جهدك التدريبي والبحث عن الفرصة المناسبة.",
+      "items": [
+        {
+          "id": "market-search",
+          "title": "مهارات البحث عن وظيفة",
+          "type": "podcast",
+          "source": "هدف",
+          "duration": "34 دقيقة",
+          "desc": "حلقة بودكاست من «هدف» عن مهارات البحث عن وظيفة وأساليبه.",
+          "url": "https://youtu.be/L49LoQ_5QGo?si=Rdpn1CgsWmoR5z2o",
+          "verified": false
+        },
+        {
+          "id": "market-future",
+          "title": "متطلبات سوق العمل المستقبلية",
+          "type": "podcast",
+          "source": "هدف",
+          "duration": "12 دقيقة",
+          "desc": "حلقة بودكاست من «هدف» عن المهارات والمتطلبات التي يُتوقع أن يطلبها سوق العمل مستقبلًا.",
+          "url": "https://youtu.be/ZJaUJ9L7Hkk?si=mu_rSabTcktDALhh",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "ordinal": "المسار الثالث",
+      "name": "اجتياز المقابلات الشخصية",
+      "icon": "interview",
+      "summary": "المقابلة هي اللحظة التي تتحول فيها السيرة الذاتية إلى حوار؛ يضم المسار مادتين للاستعداد لها.",
+      "items": [
+        {
+          "id": "int-methods",
+          "title": "الأساليب الصحيحة في المقابلات الوظيفية",
+          "type": "podcast",
+          "source": "هدف",
+          "duration": "36 دقيقة",
+          "desc": "حلقة بودكاست من «هدف» عن الأساليب الصحيحة في التعامل مع المقابلات الوظيفية.",
+          "url": "https://youtu.be/dHABMqb1Ju8?si=lCIoGPORePCBke1f",
+          "verified": false
+        },
+        {
+          "id": "int-pro",
+          "title": "المقابلة الشخصية الاحترافية",
+          "type": "course",
+          "source": "منصة دروب",
+          "duration": "3 ساعات",
+          "desc": "تكسب المتدرب المعارف المتعلقة بالمقابلة الشخصية، وتبرز أهمية المهارات الحوارية والاستعداد الجيد لها بما يزيد فرصه في الحصول على وظيفة. المستوى: مبتدئ.",
+          "url": "https://lms.doroob.sa/courses/course-v1:Doroob+C.S-CRSKL014+AUG2021/about",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "ordinal": "المسار الرابع",
+      "name": "الذكاء الاصطناعي",
+      "icon": "ai",
+      "summary": "أصبحت المعرفة بأساسيات الذكاء الاصطناعي جزءًا من المهارات الرقمية المطلوبة؛ يبدأ المسار بالمبادئ ثم تجربة عمل افتراضية.",
+      "items": [
+        {
+          "id": "ai-basics",
+          "title": "مبادئ الذكاء الاصطناعي",
+          "type": "course",
+          "source": "سدايا – سماي",
+          "duration": "4 ساعات",
+          "desc": "دورة من سدايا (سماي) تتناول مبادئ الذكاء الاصطناعي بحسب عنوانها.",
+          "url": "https://sdaia.gov.sa/ar/MediaCenter/Initiatives/Pages/Details.aspx?ItemID=19",
+          "verified": false
+        },
+        {
+          "id": "ms-ai",
+          "title": "الذكاء الاصطناعي في مايكروسوفت",
+          "type": "virtual",
+          "source": "مسك بالتعاون مع مايكروسوفت",
+          "duration": "7 ساعات",
+          "desc": "تجربة عمل افتراضية محاكية للواقع من مايكروسوفت في علم البيانات والذكاء الاصطناعي، يعمل فيها المشارك بدور مستشار مبتدئ عبر أربع مهام: إعداد مساحة عمل على Azure، وتحليل البيانات، وبناء نموذج باستخدام Custom Vision، وبناء نموذج باستخدام Azure Machine Learning. موجهة لحديثي التخرج من تخصصات تقنية وطلبة السنة الأخيرة.",
+          "url": "https://hub.misk.org.sa/ar/programs/skills/microsoft-x-misk-virtual-work-experience-artificial-intelligence/",
+          "sharedWith": [
+            4,
+            8
+          ],
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "ordinal": "المسار الخامس",
+      "name": "خدمات صندوق تنمية الموارد البشرية (هدف)",
+      "icon": "gov",
+      "summary": "",
+      "pending": true,
+      "items": []
+    },
+    {
+      "id": 6,
+      "ordinal": "المسار السادس",
+      "name": "المهارات الشخصية",
+      "icon": "people",
+      "summary": "تحسم المهارات الشخصية كثيرًا من مواقف العمل اليومية؛ يجمع المسار مواد في التواصل والذكاء العاطفي والقيادة والتخطيط.",
+      "items": [
+        {
+          "id": "soft-podcast",
+          "title": "المهارات الناعمة وعلاقتها بأدائك الوظيفي",
+          "type": "podcast",
+          "source": "هدف",
+          "duration": "15 دقيقة",
+          "desc": "حلقة بودكاست من «هدف» عن علاقة المهارات الناعمة بالأداء الوظيفي.",
+          "url": "https://youtu.be/bpWM9WX1GvQ?si=dXyL-BkbWpxz6Apw",
+          "verified": false
+        },
+        {
+          "id": "soft-eq",
+          "title": "مهارات الذكاء العاطفي",
+          "type": "enrich",
+          "source": "هدف",
+          "duration": "ساعة واحدة",
+          "desc": "مادة مرئية من «هدف» عن مهارات الذكاء العاطفي.",
+          "url": "https://youtu.be/lSu0kNN1xQQ?si=vBhcMEYCrEHRq8uC",
+          "verified": false
+        },
+        {
+          "id": "soft-lead",
+          "title": "القيادة المؤثرة والإدارة الفعالة",
+          "type": "course",
+          "source": "منصة إدراك",
+          "duration": "3 ساعات",
+          "desc": "دورة على منصة إدراك تتناول القيادة المؤثرة والإدارة الفعالة بحسب عنوانها.",
+          "url": "https://programs.edraak.org/learn/course/lem101-v2019_t4",
+          "verified": false
+        },
+        {
+          "id": "soft-comm",
+          "title": "مهارة التواصل الفعال",
+          "type": "podcast",
+          "source": "مختلف",
+          "duration": "ساعة واحدة",
+          "desc": "حلقة بودكاست عن مهارة التواصل الفعال، والجهة المنتجة لها مذكورة في المصدر الأصلي بكلمة «مختلف».",
+          "url": "https://youtu.be/fXJkviW1W9o?si=Gk0aO4jxa6L-_BYF",
+          "verified": false
+        },
+        {
+          "id": "soft-entre",
+          "title": "العقلية الريادية وإدارة الأزمات",
+          "type": "course",
+          "source": "منصة دروب",
+          "duration": "ساعتان",
+          "desc": "جلسة تدريبية بالتعاون مع «منشآت» يقدمها الأستاذ قليّل الشهري، تتناول مفهوم الأزمات، والعقل الريادي، واستراتيجية العقلية وطرق التفكير. المستوى: مبتدئ.",
+          "url": "https://lms.doroob.sa/courses/Doroob/W.S-BUSAD011/MAY2020/about",
+          "verified": true
+        },
+        {
+          "id": "soft-strategy",
+          "title": "التخطيط الاستراتيجي لرواد الأعمال",
+          "type": "course",
+          "source": "منصة دروب",
+          "duration": "ساعة ونصف",
+          "desc": "جلسة تدريبية بالتعاون مع «منشآت» يقدمها الدكتور وديع سعيد أزهر، تتناول رواد الأعمال، ولماذا نخطط وهل التخطيط ضرورة، وتحديات التخطيط الاستراتيجي. المستوى: مبتدئ.",
+          "url": "https://lms.doroob.sa/courses/Doroob/W.S-BUSAD019/OCT2020/about",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "ordinal": "المسار السابع",
+      "name": "مهارات Microsoft",
+      "icon": "office",
+      "summary": "إتقان أدوات المكتب الأساسية يرفع سرعة الإنجاز في أي وظيفة؛ يغطي المسار Excel وWord وقواعد البيانات.",
+      "items": [
+        {
+          "id": "ms-excel",
+          "title": "مهارات متقدمة في Excel",
+          "type": "course",
+          "source": "منصة إدراك",
+          "duration": "3 ساعات",
+          "desc": "دورة على منصة إدراك تتناول المهارات المتقدمة في برنامج Excel بحسب عنوانها.",
+          "url": "https://programs.edraak.org/learn/course/ae101-vsp-2019",
+          "verified": false
+        },
+        {
+          "id": "ms-word",
+          "title": "معالج النصوص Word",
+          "type": "course",
+          "source": "منصة إدراك",
+          "duration": "3 ساعات",
+          "desc": "تعلّم أساسيات معالجة النصوص والتعامل معها في Word، وتُعد جزءًا أساسيًا من سلسلة امتحانات ICDL.",
+          "url": "https://www.edraak.org/programs/course/icdl3-v2019sp/",
+          "verified": true
+        },
+        {
+          "id": "ms-db",
+          "title": "قواعد بيانات Microsoft",
+          "type": "course",
+          "source": "منصة إدراك",
+          "duration": "3 ساعات",
+          "desc": "مقدمة في Microsoft SQL Server: أنواع البيانات والاستعلامات وكائنات قاعدة البيانات، كخطوة أولى نحو إدارة قواعد البيانات.",
+          "url": "https://www.edraak.org/programs/course/sql1-v1/",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "ordinal": "المسار الثامن",
+      "name": "مسك للإعداد المهني",
+      "icon": "compass",
+      "summary": "يجمع هذا المسار مواد مسك في الإعداد المهني: برنامجًا متكاملًا من 16 دورة، ومادة لاكتشاف المسار، وتجربة عمل افتراضية.",
+      "items": [
+        {
+          "id": "misk-career",
+          "title": "برنامج مسك للإعداد المهني",
+          "type": "program",
+          "source": "مسك",
+          "duration": "16 دورة، مدة كل دورة من ساعة إلى ساعتين",
+          "desc": "برنامج تعلم ذاتي عن بعد يضم 16 دورة في أربع مكتبات: الإعداد المهني (بناء السيرة الذاتية ومهارات المقابلة والبحث عن وظيفة ولينكد إن)، والمهارات الناعمة (التواصل الفعال والذكاء العاطفي والتفكير الناقد وإدارة الوقت)، والمهارات التقنية (الأمن السيبراني والحوسبة السحابية والذكاء الاصطناعي)، والمهارات المهنية (التفكير التصميمي وتحليل الأعمال والقيادة)، مع جلسات تدريبية وإرشادية.",
+          "url": "https://hub.misk.org.sa/ar/programs/skills/misk-career-essentials-program/",
+          "courseCount": 16,
+          "verified": true
+        },
+        {
+          "id": "misk-discover",
+          "title": "اكتشف مسارك",
+          "type": "course",
+          "source": "مسك",
+          "duration": "ساعتان",
+          "desc": "برنامج تعلم ذاتي عن بعد لاكتشاف الذات والقدرات والسمات الشخصية والقطاعات الواعدة وبناء الأهداف المهنية. تصفه الصفحة الأصلية بأنه مصمم لطلاب المرحلة الثانوية، مع مسارات لأولياء الأمور والمعلمين.",
+          "url": "https://hub.misk.org.sa/ar/programs/skills/discover-your-path/",
+          "verified": true
+        },
+        {
+          "id": "ms-ai",
+          "title": "تجربة العمل الافتراضي: الذكاء الاصطناعي في مايكروسوفت",
+          "type": "virtual",
+          "source": "مسك بالتعاون مع مايكروسوفت",
+          "duration": "7 ساعات",
+          "desc": "تجربة عمل افتراضية محاكية للواقع من مايكروسوفت في علم البيانات والذكاء الاصطناعي، يعمل فيها المشارك بدور مستشار مبتدئ عبر أربع مهام: إعداد مساحة عمل على Azure، وتحليل البيانات، وبناء نموذج باستخدام Custom Vision، وبناء نموذج باستخدام Azure Machine Learning. موجهة لحديثي التخرج من تخصصات تقنية وطلبة السنة الأخيرة.",
+          "url": "https://hub.misk.org.sa/ar/programs/skills/microsoft-x-misk-virtual-work-experience-artificial-intelligence/",
+          "sharedWith": [
+            4,
+            8
+          ],
+          "verified": true
+        }
+      ]
+    }
+  ]
+};
+
+function initPage() {
+  var D = window.BAG_DATA;
+  var qEl = document.getElementById('q');
+  var chipsEl = document.getElementById('typeChips');
+  var state = { q: '', type: 'all' };
+  var onHome = !!document.getElementById('results');
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  var ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+
+  function setChips() {
+    if (!chipsEl) return;
+    Array.prototype.forEach.call(chipsEl.children, function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-type') === state.type); });
+  }
+  if (chipsEl) chipsEl.addEventListener('click', function (e) {
+    var b = e.target.closest('.chip'); if (!b) return;
+    state.type = b.getAttribute('data-type'); setChips(); render();
+  });
+  if (qEl) qEl.addEventListener('input', function () { state.q = qEl.value.trim(); render(); });
+  var reset = document.getElementById('reset');
+  if (reset) reset.addEventListener('click', function () { state.q = ''; state.type = 'all'; if (qEl) qEl.value = ''; setChips(); render(); });
+
+  function ok(type, text) {
+    if (state.type !== 'all' && type !== state.type) return false;
+    return !state.q || text.indexOf(state.q.toLowerCase()) !== -1;
+  }
+
+  function resultCard(it, p) {
+    var other = '';
+    return '<article class="card"><span class="badge t-' + it.type + '">' + esc(D.types[it.type]) + '</span>' +
+      '<a class="from" href="path-' + p.id + '.html">' + esc(p.ordinal) + ': ' + esc(p.name) + '</a>' +
+      '<h3>' + esc(it.title) + '</h3>' +
+      '<dl class="meta"><dt>الجهة</dt><dd>' + esc(it.source) + '</dd><dt>المدة</dt><dd>' + esc(it.duration) + '</dd></dl>' +
+      '<p class="desc">' + esc(it.desc) + '</p>' +
+      '<a class="btn" href="' + esc(it.url) + '" target="_blank" rel="noopener noreferrer">' + esc(D.ctaByType[it.type]) + ARROW + '</a></article>';
+  }
+
+  function render() {
+    if (onHome) {
+      var active = state.q !== '';
+      var box = document.getElementById('results');
+      box.hidden = !active;
+      if (!active) return;
+      var seen = {}, html = '', n = 0;
+      D.paths.forEach(function (p) {
+        p.items.forEach(function (it) {
+          if (seen[it.id]) return;               // مادة مشتركة تظهر مرة واحدة في النتائج
+          var text = (it.title + ' ' + it.source + ' ' + it.desc + ' ' + D.types[it.type]).toLowerCase();
+          if (ok(it.type, text)) { seen[it.id] = 1; n++; html += resultCard(it, p); }
+        });
+      });
+      document.getElementById('resGrid').innerHTML = html;
+      document.getElementById('resEmpty').hidden = n > 0;
+      document.getElementById('resCount').textContent = n ? 'عدد النتائج: ' + n : '';
+      return;
+    }
+    var cards = document.querySelectorAll('#grid .card'), shown = 0;
+    Array.prototype.forEach.call(cards, function (c) {
+      var v = ok(c.getAttribute('data-type'), c.getAttribute('data-text'));
+      c.hidden = !v; if (v) shown++;
+    });
+    var empty = document.getElementById('empty'); if (empty) empty.hidden = shown > 0 || !cards.length;
+    var st = document.getElementById('status');
+    if (st) st.textContent = (state.q || state.type !== 'all') && shown ? 'عدد النتائج: ' + shown : '';
+  }
+}
+
+var appEl = document.getElementById('app');
+function go(page, anchor, push) {
+  var t = document.getElementById('tpl-' + page) || document.getElementById('tpl-index');
+  appEl.innerHTML = ''; appEl.appendChild(t.content.cloneNode(true));
+  initPage();
+  var d = D2.paths.filter(function (p) { return 'path-' + p.id === page; })[0];
+  document.title = (d ? d.name + ' | ' : '') + 'حقيبة الجاهزية المهنية';
+  if (push !== false) history.pushState(null, '', '#/' + page + (anchor ? '/' + anchor : ''));
+  var el = anchor && document.getElementById(anchor);
+  if (el) el.scrollIntoView(); else window.scrollTo(0, 0);
+}
+var D2 = window.BAG_DATA;
+function fromHash() {
+  var m = location.hash.match(/^#\/([^\/]+)(?:\/(.+))?$/);
+  go(m ? m[1] : 'index', m && m[2], false);
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a'); if (!a) return;
+  var h = a.getAttribute('href') || '';
+  var m = h.match(/^(index|path-\d)\.html(?:#(.+))?$/);
+  if (m) { e.preventDefault(); go(m[1], m[2]); return; }
+  if (h.charAt(0) === '#' && h.charAt(1) !== '/') {
+    e.preventDefault();
+    var cur = (location.hash.match(/^#\/([^\/]+)/) || [0, 'index'])[1];
+    go(cur === 'index' || !cur ? 'index' : 'index', h.slice(1));
+  }
+});
+window.addEventListener('popstate', fromHash);
+fromHash();
+</script></body></html>
